@@ -350,4 +350,4 @@ License information will be added based on the project's intended distribution a
 
 ## ⭐ Support
 
-If you find this project interesting, consider giving the repository a ⭐ on GitHub.
+If you find this project interesting,contact in email vikasannigeri076@gmail.com & I will show the working prototype.
