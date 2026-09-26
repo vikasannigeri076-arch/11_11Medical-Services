@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bgcolor">#F4F9FC</color>
+    <color name="PrimaryTextColor">#003366</color>
+    <color name="customerbtn">#48CAE4</color>
+    <color name="shopownerbtn">#70C1B3</color>
+    <color name="loginbtn">#0077B6</color>
+    <color name="signupbtn">#0077B6</color>
+    <color name="loginsignuptxtcolor">#003366</color>
+    <color name="otpbtn">#0077B6</color>
+    <color name="continuebtn">#0077B6</color>
+    <color name="unselectedlangbg">#E0E7ED</color>
+    <color name="unselectedlangtxt">#003366</color>
+    <color name="selectedlangbg">#003366</color>
+    <color name="selectedlangtxt">#FFFFFF</color>
+    <color name="subtitleofuserhomepage">#EBF2F7</color>
+    <color name="actionicon">#0077B6</color>
+
+
+</resources>

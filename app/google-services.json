@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "450871359084",
+    "project_id": "medicalservies",
+    "storage_bucket": "medicalservies.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450871359084:android:332b22e132f34bb6efca49",
+        "android_client_info": {
+          "package_name": "com.example.a11_11medicalservies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEHQotstMZbrq45yGec8O16NsxlxVdyKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

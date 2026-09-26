@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_approved"
+        android:icon="@drawable/rect_border_black"
+        android:title="Approved" />
+    <item
+        android:id="@+id/nav_dispatched"
+        android:icon="@drawable/barorder"
+        android:title="Dispatched" />
+    <item
+        android:id="@+id/nav_completed"
+        android:icon="@drawable/rounded_green_badge"
+        android:title="Completed" />
+    <item
+        android:id="@+id/nav_canceled"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="Canceled" />
+</menu>

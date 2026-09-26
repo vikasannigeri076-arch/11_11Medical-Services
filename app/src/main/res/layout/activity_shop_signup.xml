@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bgcolor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- App Logo -->
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/applogo1" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shop Owner Signup"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Shop Name -->
+        <EditText
+            android:id="@+id/etShopName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Shop Name"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Owner Name -->
+        <EditText
+            android:id="@+id/etOwnerName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Owner Name"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Mobile Number -->
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Mobile Number"
+            android:inputType="phone"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- GST Number -->
+        <EditText
+            android:id="@+id/etGST"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="GST Number"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- District Selection -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Select District">
+
+            <AutoCompleteTextView
+                android:id="@+id/actvDistrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/PrimaryTextColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Pincode -->
+        <EditText
+            android:id="@+id/etPincode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Pincode"
+            android:inputType="number"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Address -->
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="70dp"
+            android:hint="Shop Address"
+            android:textColor="@color/PrimaryTextColor"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Location Button -->
+        <Button
+            android:id="@+id/btnLocation"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Select Shop Location"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/PrimaryTextColor"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Agreement -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp">
+
+            <CheckBox
+                android:id="@+id/checkAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I agree to company "
+                android:textColor="@color/loginsignuptxtcolor" />
+
+            <TextView
+                android:id="@+id/tvTermsLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="terms and conditions"
+                android:textColor="@color/continuebtn"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Signup Button -->
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Create Account"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/otpbtn" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    android:orientation="vertical"
+    tools:context=".LanguageSelectionActivity">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/applogo1" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/loginsignuptxtcolor"
+        android:text="@string/selclangu" />
+
+    <!-- Language List -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- English -->
+            <Button
+                android:id="@+id/btnEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="English"
+                android:backgroundTint="@color/unselectedlangbg"
+                android:textColor="@color/unselectedlangtxt"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Kannada -->
+            <Button
+                android:id="@+id/btnKannada"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="ಕನ್ನಡ"
+                android:backgroundTint="@color/unselectedlangbg"
+                android:textColor="@color/unselectedlangtxt"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Hindi -->
+            <Button
+                android:id="@+id/btnHindi"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="हिंदी"
+                android:backgroundTint="@color/unselectedlangbg"
+                android:textColor="@color/unselectedlangtxt"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Tamil -->
+            <Button
+                android:id="@+id/btnTamil"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/unselectedlangbg"
+                android:textColor="@color/unselectedlangtxt"
+                android:text="தமிழ்"
+                android:layout_marginBottom="10dp"/>
+
+            <!-- Telugu -->
+            <Button
+                android:id="@+id/btnTelugu"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="తెలుగు"
+                android:backgroundTint="@color/unselectedlangbg"
+                android:textColor="@color/unselectedlangtxt"
+                android:layout_marginBottom="10dp"/>
+            <!-- Other languages can be added here... -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/continuebtn"
+        android:text="Continue" />
+
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_margin="4dp"
+    android:elevation="2dp">
+
+    <TextView
+        android:id="@+id/tvCustomerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="Customer Name"
+        android:textColor="@color/PrimaryTextColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCustomerName"
+        android:text="Order #12345"
+        android:textColor="@color/loginsignuptxtcolor"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvOrderDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="Date &amp; Time"
+        android:textColor="@color/black"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/tvOrderDateTime"
+        android:layout_toStartOf="@+id/tvStatus"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@android:drawable/ic_menu_delete"
+        app:tint="@android:color/holo_red_dark"
+        android:contentDescription="Delete" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOrderDateTime"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_green_badge"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="2dp"
+        android:text="Open"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvApprovalDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvOrderId"
+        android:layout_marginTop="4dp"
+        android:text="Approved: Date &amp; Time"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

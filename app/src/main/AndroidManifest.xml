@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- Queries for UPI Apps to support Razorpay flow -->
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user" />
+        <package android:name="com.phonepe.app" />
+        <package android:name="net.one97.paytm" />
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="upi" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/applogo1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/applogo1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme._11_11MedicalServies"
+        tools:replace="android:allowBackup,android:dataExtractionRules,android:fullBackupContent">
+
+        <activity
+            android:name=".OrderLabelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderApprovalDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopCodPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BankDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatbotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HelpSupportActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderHistoryActivityShop"
+            android:exported="false" />
+        <activity
+            android:name=".QrPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderTrackingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BillUploadSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerBillDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopBillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MedicineAvailabilityActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AvailableShopsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerOrdersActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDr9jh3k-35B0CwKF_-kYpaNOO6XqWDK3o" />
+
+        <activity
+            android:name=".ShopHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapPickerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TermsAndConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LanguageSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerSignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShopLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

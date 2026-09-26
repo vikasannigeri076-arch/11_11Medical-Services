@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/tvMedicineName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Medicine Name"
+        android:textColor="@color/PrimaryTextColor"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/etMedicinePrice"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:hint="Price ₹"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rect_border_black"
+        android:padding="8dp"
+        android:textSize="14sp" />
+</LinearLayout>

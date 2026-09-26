@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/bgcolor"
+    tools:context=".TermsAndConditionsActivity">
+
+    <TextView
+        android:id="@+id/tvTermsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Terms and Conditions"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/loginsignuptxtcolor" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTermsContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/loginsignuptxtcolor"
+                android:text="1. Introduction\nWelcome to 11 11. By using our services, you agree to these terms.\n\n2. Shop Owner Responsibilities\nAs a shop owner, you are responsible for maintaining accurate shop information, pricing, and availability of products.\n\n3. Quality Standards\nAll medical services and products provided must meet the required legal and quality standards.\n\n4. Payments and Commissions\nDetails regarding payments, service fees, and commissions will be provided in the service agreement.\n\n5. Termination\nWe reserve the right to terminate access to our platform for any violation of these terms.\n\n6. Privacy Policy\nYour data is handled according to our privacy policy.\n\n7. Amendments\nThese terms may be updated from time to time. Continued use of the platform signifies acceptance of updated terms.\n\n8. Liability for Expired Medicine\nIf you deliver expired medicine, and in case any legal case occurs, 11 11 is not responsible for that. The shop owner is solely responsible for ensuring products are within their expiry dates." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackToSignup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Back"
+                android:textAllCaps="false"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:cornerRadius="12dp"
+                app:backgroundTint="@color/continuebtn" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

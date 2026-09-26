@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">11_11MedicalServies</string>
+    <string-array name="medicine_units">
+        <item>Single</item>
+        <item>Strip</item>
+        <item>Box</item>
+    </string-array>
+
+    <!-- Missing Strings -->
+    <string name="customerloginpagetagline">Providing Quality Healthcare at Your Doorstep</string>
+    <string name="entname">Enter Name</string>
+    <string name="entphnum">Enter Phone Number</string>
+    <string name="selclangu">Select Language</string>
+    <string name="roleselection">Select Your Role</string>
+    <string name="verify_shop_login">Verify and Login</string>
+
+    <!-- Order Tracking Strings -->
+    <string name="waiting_for_driver">Waiting for Delivery Partner…</string>
+    <string name="preparing_order">Pharmacy is preparing your order</string>
+    <string name="order_confirmed_msg">Pharmacy has confirmed your order.</string>
+    <string name="order_approved_msg">Pharmacy is preparing your medicines.</string>
+    <string name="order_picked_msg">Delivery partner has picked up your order.</string>
+    <string name="order_on_way_msg">Your order is on the way!</string>
+    <string name="order_delivered_msg">Order delivered successfully.</string>
+    <string name="processing_order">Processing your order…</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="order_details_title">Order Details (#%1$s)</string>
+    <string name="order_id_label">Order ID: #%1$s</string>
+    <string name="amount_format">₹%1$.2f</string>
+    <string name="payment_method_label">Payment Method</string>
+    <string name="payment_status_label">Payment Status</string>
+    <string name="eta_format">%1$d mins</string>
+    <string name="distance_format">%1$.1f km</string>
+    <string name="call_label">Call</string>
+    <string name="driver_contact_unavailable">Delivery partner contact not available</string>
+    <string name="order_id_not_found">Order ID not found</string>
+    <string name="pharmacy_label">Pharmacy</string>
+    <string name="delivery_location">Delivery Location</string>
+    <string name="you_label">You</string>
+    <string name="delivery_partner_label">Delivery Partner</string>
+
+    <!-- Payment Strings -->
+    <string name="online_payments">Online Payments</string>
+    <string name="cod_payments">COD Payments</string>
+    <string name="total_earnings_grand">Total Earnings (Grand Total)</string>
+    <string name="recent_transactions">Recent Transactions</string>
+    <string name="customize">Customize</string>
+    <string name="all_time">All time</string>
+    <string name="total_label">Total</string>
+
+    <!-- Order Label Strings -->
+    <string name="order_label_app_name">11:11 Medical Services</string>
+    <string name="order_label_customer_details">CUSTOMER DETAILS</string>
+    <string name="order_label_bill_summary">BILL SUMMARY</string>
+    <string name="order_label_handle_with_care">* Handle With Care *</string>
+    <string name="order_label_print">Print</string>
+    <string name="order_label_close">Close</string>
+    <string name="order_label_medicine_total">Medicine Total</string>
+    <string name="order_label_delivery_charge">Delivery Charge</string>
+    <string name="order_label_grand_total">Grand Total</string>
+    <string name="order_label_id_format">Order ID: #%1$s</string>
+    <string name="order_label_date_format">Date: %1$s</string>
+    <string name="order_label_name_format">Name: %1$s</string>
+    <string name="order_label_phone_format">Phone: %1$s</string>
+    <string name="order_label_address_format">Address: %1$s</string>
+    <string name="order_label_payment_method_format">Payment: %1$s</string>
+    <string name="order_label_payment_status_format">Status: %1$s</string>
+    <string name="order_label_print_preview">Print Preview</string>
+</resources>

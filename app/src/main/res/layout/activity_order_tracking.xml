@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor"
+    tools:context=".OrderTrackingActivity">
+
+    <!-- Google Map Background -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay Back Button -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_launcher_foreground"
+            app:tint="@color/black" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ETA and Distance Overlay -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvEta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvEta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 mins"
+                android:textColor="@color/otpbtn"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="14dp"
+                android:background="#DDDDDD"
+                android:layout_marginHorizontal="12dp"/>
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.5 km"
+                android:textColor="@color/PrimaryTextColor"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bottom Sheet -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/bottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_white_border"
+        android:elevation="24dp"
+        app:behavior_peekHeight="280dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Handle -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Status Message -->
+            <TextView
+                android:id="@+id/tvLiveStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/waiting_for_driver"
+                android:textStyle="bold"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="20sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/tvStatusDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preparing_order"
+                android:textColor="@color/loginsignuptxtcolor"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp"/>
+
+            <!-- Progress Indicator -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+
+                <View android:id="@+id/step1" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#E0E0E0" android:layout_marginEnd="4dp"/>
+                <View android:id="@+id/step2" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#E0E0E0" android:layout_marginEnd="4dp"/>
+                <View android:id="@+id/step3" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#E0E0E0" android:layout_marginEnd="4dp"/>
+                <View android:id="@+id/step4" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#E0E0E0" android:layout_marginEnd="4dp"/>
+                <View android:id="@+id/step5" android:layout_width="0dp" android:layout_height="4dp" android:layout_weight="1" android:background="#E0E0E0"/>
+            </LinearLayout>
+
+            <!-- Delivery Partner Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvDeliveryPartner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#F0F0F0"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginBottom="24dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvDriver"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        app:cardCornerRadius="28dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp"
+                        android:layout_alignParentStart="true">
+                        <ImageView
+                            android:id="@+id/ivDriverPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/applogo1"
+                            android:scaleType="centerCrop"/>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/cvDriver"
+                        android:layout_toStartOf="@id/btnCallDriver"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvDriverName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rahul Kumar"
+                            android:textColor="@color/PrimaryTextColor"
+                            android:textStyle="bold"
+                            android:textSize="16sp"/>
+                        <TextView
+                            android:id="@+id/tvVehicleNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="KA 01 ET 1234"
+                            android:textColor="@color/loginsignuptxtcolor"
+                            android:textSize="13sp"/>
+                    </LinearLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallDriver"
+                        style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        app:icon="@drawable/phonecall"
+                        app:backgroundTint="@color/selectedlangbg"
+                        app:iconTint="@color/white"
+                        android:padding="0dp"
+                        app:iconSize="24dp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Order Details Section -->
+            <TextView
+                android:id="@+id/tvOrderSummaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_summary"
+                android:textStyle="bold"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F8FAFB"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvShopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apollo Pharmacy"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/tvOrderId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Order ID: #ORD12345"
+                    android:textColor="@color/loginsignuptxtcolor"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Medicine Amount" android:textColor="@color/loginsignuptxtcolor"/>
+                    <TextView android:id="@+id/tvMedicineAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹0.00" android:textColor="@color/PrimaryTextColor" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Delivery Charge" android:textColor="@color/loginsignuptxtcolor"/>
+                    <TextView android:id="@+id/tvDeliveryCharge" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹0.00" android:textColor="@color/PrimaryTextColor" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="12dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Grand Total" android:textColor="@color/PrimaryTextColor" android:textStyle="bold"/>
+                    <TextView android:id="@+id/tvGrandTotal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="₹0.00" android:textColor="@color/otpbtn" android:textStyle="bold" android:textSize="16sp"/>
+                </LinearLayout>
+
+                <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE" android:layout_marginBottom="12dp"/>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="4dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Payment Method" android:textColor="@color/loginsignuptxtcolor" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvPaymentMethod" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="COD" android:textColor="@color/PrimaryTextColor" android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Payment Status" android:textColor="@color/loginsignuptxtcolor" android:textSize="13sp"/>
+                    <TextView android:id="@+id/tvPaymentStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending" android:textColor="@color/otpbtn" android:textSize="13sp" android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

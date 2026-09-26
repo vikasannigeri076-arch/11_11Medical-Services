@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_money"
+        android:title="COD Money"
+        android:icon="@android:drawable/ic_menu_agenda"/>
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home"
+        android:icon="@drawable/barhome"/>
+
+    <item
+        android:id="@+id/nav_payment"
+        android:title="Payment"
+        android:icon="@android:drawable/ic_menu_save"/>
+
+    <item
+        android:id="@+id/nav_history"
+        android:title="Orders History"
+        android:icon="@drawable/barorder"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:title="Settings"
+        android:icon="@drawable/barsettings"/>
+
+</menu>
